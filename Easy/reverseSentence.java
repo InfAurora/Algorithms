@@ -5,12 +5,12 @@ public class reverseSentence {
     String sentenceOne = "The whole world would like to say hello!";
     String sentenceTwo = "Roses are red, violets are blue, this is a sentence.";
     String sentenceThree = "Hi, my name is Jeff!";
-    System.out.println(reverseSentence(sentenceOne));
-    System.out.println(reverseSentence(sentenceTwo));
-    System.out.println(reverseSentence(sentenceThree));
+    System.out.println(reversedStringMethod(sentenceOne));
+    System.out.println(reversedStringMethod(sentenceTwo));
+    System.out.println(reversedStringMethod(sentenceThree));
   }
 
-  public static String reverseSentence(String sentenceToBeReversed) {
+  public static String reversedStringMethod(String sentenceToBeReversed) {
     String[] arrayOfWords = sentenceToBeReversed.split(" ");
     String reversedString = "";
     String wordHolder = "";
