@@ -17,7 +17,7 @@ public class TwoSum {
 
   public static int[] findTargetSum(int[] arrayOfIntegers, int target) {
     int[] indicies = new int[2];
-    HashMap<Integer, Integer> numberNeeded = new HashMap();
+    HashMap<Integer, Integer> numberNeeded = new HashMap<>();
     for (int i = 0; i <= arrayOfIntegers.length - 1; i++) {
       if (numberNeeded.containsKey(target - arrayOfIntegers[i])) {
         indicies[0] = numberNeeded.get(target - arrayOfIntegers[i]);
