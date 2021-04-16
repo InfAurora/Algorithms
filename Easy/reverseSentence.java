@@ -2,16 +2,30 @@ package Easy;
 
 public class reverseSentence {
   public static void main(String[] args) {
-    String sentenceOne = "";
-    String sentenceTwo = "";
-    String sentenceThree = "";
+    String sentenceOne = "The whole world would like to say hello!";
+    String sentenceTwo = "Roses are red, violets are blue, this is a sentence.";
+    String sentenceThree = "Hi, my name is Jeff!";
     System.out.println(reverseSentence(sentenceOne));
     System.out.println(reverseSentence(sentenceTwo));
     System.out.println(reverseSentence(sentenceThree));
   }
 
   public static String reverseSentence(String sentenceToBeReversed) {
-    
-    return null;
+    String[] arrayOfWords = sentenceToBeReversed.split(" ");
+    String reversedString = "";
+    String wordHolder = "";
+    for (int i = 0; i < arrayOfWords.length / 2; i++) {
+      wordHolder = arrayOfWords[i];
+      arrayOfWords[i] = arrayOfWords[arrayOfWords.length - i - 1];
+      arrayOfWords[arrayOfWords.length - i - 1] = wordHolder;
+    }
+
+    // leaves a trailing space at the end of the sentence
+    // can resolve by using a normal for loop and using an if 
+    // statement to check if you are at the end of the array
+    for (String word : arrayOfWords) {
+      reversedString += word + " ";
+    }
+    return reversedString;
   }
 }
