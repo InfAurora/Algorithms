@@ -1,6 +1,6 @@
 package Easy;
 
-public class reverseWord {
+public class ReverseWord {
   public static void main(String[] args) {
     String wordOne = "Hello!";
     String wordTwo = "race";

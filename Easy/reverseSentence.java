@@ -1,6 +1,6 @@
 package Easy;
 
-public class reverseSentence {
+public class ReverseSentence {
   public static void main(String[] args) {
     String sentenceOne = "The whole world would like to say hello!";
     String sentenceTwo = "Roses are red, violets are blue, this is a sentence.";
