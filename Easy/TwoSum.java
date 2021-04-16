@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
+  // Time???
+  // Space???
   public static void main(String[] args) {
     int[] numbersOne = {1, 2, -1, -3, 3, -4, 5};
     int[] numbersTwo = {1, 2, 5};

@@ -1,6 +1,8 @@
 package Easy;
 
 public class ReverseWord {
+  // O(n) time
+  // space???
   public static void main(String[] args) {
     String wordOne = "Hello!";
     String wordTwo = "race";

@@ -1,6 +1,9 @@
 package Easy;
 
 public class Palindrom {
+  // This only has to go through half of the word
+  // O(n) / 2 time
+  // Space???
   public static void main(String[] args) {
     String wordOne = "racecar";
     String wordTwo = "helloworld";
