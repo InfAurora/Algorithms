@@ -1,5 +1,3 @@
-package Easy;
-
 import java.util.Stack;
 
 public class ValidParentheses {
@@ -26,24 +24,40 @@ public class ValidParentheses {
       if (stringOfBrackets.length() == 1) {
         return false;
       }
-      if(stringOfBrackets.charAt(i) == ')') {
-        if (stackOfBrackets.peek() == '(') {
-          stackOfBrackets.pop();
-        }
-        else return false;
-      } else if (stringOfBrackets.charAt(i) == ']') {
-        if (stackOfBrackets.peek() == '[') {
-          stackOfBrackets.pop();
-        }
-        else return false;
-      } else if (stringOfBrackets.charAt(i) == '}') {
-        if (stackOfBrackets.peek() == '{') {
-          stackOfBrackets.pop();
-        }
-        else return false;
-      } else {
-        stackOfBrackets.push(stringOfBrackets.charAt(i));
+      
+      switch (stringOfBrackets.charAt(i)) {
+        case ')':
+          if (stackOfBrackets.size() == 0) {
+            return false;
+          } else if (stackOfBrackets.peek() == '(') {
+            stackOfBrackets.pop();
+          }
+          else return false;
+          break;
+        case ']':
+          if (stackOfBrackets.size() == 0) {
+            return false;
+          } else if (stackOfBrackets.peek() == '[') {
+            stackOfBrackets.pop();
+          }
+          else return false;
+          break;
+        case '}':
+          if (stackOfBrackets.size() == 0) {
+            return false;
+          } else if (stackOfBrackets.peek() == '{') {
+            stackOfBrackets.pop();
+          }
+          else return false;
+          break;
+      
+        default:
+          stackOfBrackets.push(stringOfBrackets.charAt(i));
+          break;
       }
+    }
+    if (stackOfBrackets.size() != 0) {
+      return false;
     }
     return true;
   }
