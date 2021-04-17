@@ -1,5 +1,3 @@
-package Easy;
-
 public class ReverseWord {
   // O(n) time
   // space???

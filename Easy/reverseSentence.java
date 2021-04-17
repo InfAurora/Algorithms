@@ -1,5 +1,3 @@
-package Easy;
-
 public class ReverseSentence {
   // Only has to go through half of the words to complete
   // O(n) / 2 time

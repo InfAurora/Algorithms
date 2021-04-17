@@ -1,5 +1,3 @@
-package Easy;
-
 public class Palindrom {
   // This only has to go through half of the word
   // O(n) / 2 time
@@ -31,8 +29,6 @@ public class Palindrom {
     for (int i = secondHalf.length() - 1; i >= 0; i--) {
       reversedFirstHalf += onlyLetters.charAt(i);
     }
-      System.out.println(reversedFirstHalf);
-      System.out.println(secondHalf);
     if (reversedFirstHalf.equals(secondHalf)) {
       return true;
     }
