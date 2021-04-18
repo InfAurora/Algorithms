@@ -2,8 +2,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
-  // Time???
-  // Space???
+  // Time = log O(n) - O(n)
+  // Space = log O(n) - O(n)
   public static void main(String[] args) {
     int[] numbersOne = {1, 2, -1, -3, 3, -4, 5};
     int[] numbersTwo = {1, 2, 5};
@@ -16,7 +16,7 @@ public class TwoSum {
   public static int[] findTargetSum(int[] arrayOfIntegers, int target) {
     int[] indicies = new int[2];
     HashMap<Integer, Integer> numberNeeded = new HashMap<>();
-    for (int i = 0; i <= arrayOfIntegers.length - 1; i++) {
+    for (int i = 0; i <= arrayOfIntegers.length; i++) {
       if (numberNeeded.containsKey(target - arrayOfIntegers[i])) {
         indicies[0] = numberNeeded.get(target - arrayOfIntegers[i]);
         indicies[1] = i;

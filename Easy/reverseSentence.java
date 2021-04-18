@@ -1,7 +1,7 @@
 public class ReverseSentence {
   // Only has to go through half of the words to complete
-  // O(n) / 2 time
-  // space???
+  // time = O(n) / 2
+  // space = O(n)
   public static void main(String[] args) {
     String sentenceOne = "The whole world would like to say hello!";
     String sentenceTwo = "Roses are red, violets are blue, this is a sentence.";

@@ -1,6 +1,6 @@
 public class ReverseWord {
-  // O(n) time
-  // space???
+  // time = O(n)
+  // space = O(n)
   public static void main(String[] args) {
     String wordOne = "Hello!";
     String wordTwo = "race";

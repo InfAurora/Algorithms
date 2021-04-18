@@ -1,8 +1,8 @@
 import java.util.Stack;
 
 public class ValidParentheses {
-  // Time = 
-  // Space = 
+  // Time = O(n)
+  // Space = O(n)
   public static void main(String[] args) {
     String validStringOne = "()";
     String validStringTwo = "({()})";

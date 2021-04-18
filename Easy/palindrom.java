@@ -1,7 +1,7 @@
 public class Palindrom {
   // This only has to go through half of the word
-  // O(n) / 2 time
-  // Space???
+  // Time = O(n) / 2
+  // Space = O(n) / 2
   public static void main(String[] args) {
     String wordOne = "racecar";
     String wordTwo = "helloworld";
