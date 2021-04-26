@@ -7,18 +7,18 @@ public class FindClosestValueInBst {
   }
 
   public static int findClosestValueInBst(BST tree, int target) {
-    return findClosestValueInBst(tree, target, tree.value);
+    return findClosestValueInBstHelper(tree, target, tree.value);
   }
 	
-	public static int findClosestValueInBst(BST tree, int target, int closest) {
+	public static int findClosestValueInBstHelper(BST tree, int target, int closest) {
 		int currentNodeValue = tree.value;
    	if (Math.abs(target - closest) > Math.abs(target - currentNodeValue)) {
 			closest = tree.value;
 		}
 		if (target < currentNodeValue && tree.left != null) {
-			return findClosestValueInBst(tree.left, target, closest);
+			return findClosestValueInBstHelper(tree.left, target, closest);
 		} else if (target > currentNodeValue && tree.right != null) {
-			return findClosestValueInBst(tree.right, target, closest);
+			return findClosestValueInBstHelper(tree.right, target, closest);
 		} else {
 			return closest;
 		}
