@@ -15,7 +15,6 @@ public class FindClosestValueInBstRedo {
       BST currentNode = this;
       // continue to loop until a false or true is returned
       while(true) {
-        BST parentNode = currentNode;
         if (value < currentNode.value) {
           if (currentNode.left == null) {
             currentNode.left = newBST;
@@ -37,6 +36,16 @@ public class FindClosestValueInBstRedo {
 
     public boolean contains(int value) {
       // Write your code here.
+      BST currentNode = this;
+      while (currentNode != null) {
+        if (value < currentNode.value) {
+          currentNode = currentNode.left;
+        } else if (value > currentNode.value) {
+          currentNode = currentNode.right;
+        } else {
+          return true;
+        }
+      }
       return false;
     }
 
