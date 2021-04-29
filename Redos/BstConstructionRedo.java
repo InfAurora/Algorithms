@@ -1,4 +1,4 @@
-public class FindClosestValueInBstRedo {
+public class BstConstructionRedo {
   static class BST {
     public int value;
     public BST left;
