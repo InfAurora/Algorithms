@@ -22,7 +22,7 @@ public class FindClosestValueInBstRedo {
           } else {
             currentNode = currentNode.left;
           }
-        } else if (value > currentNode.value) {
+        } else {
           if (currentNode.right == null) {
             currentNode.right = newBST;
             break;
@@ -50,7 +50,7 @@ public class FindClosestValueInBstRedo {
     }
 
     public BST remove(int value) {
-      remove(value, null);
+			remove(value, null);
 			return this;
     }
 
@@ -84,8 +84,7 @@ public class FindClosestValueInBstRedo {
               currentNode.left = currentNode.right.left;
               currentNode.right = currentNode.right.right;
             } else {
-              // erase bst because there are no other nodes
-              currentNode = null;
+              // do nothing bst because there are no other nodes
             }
           } else if (parentNode.left == currentNode) {
             // make the parentNode.left = currentNode.left if it exists otherwise
@@ -97,6 +96,7 @@ public class FindClosestValueInBstRedo {
           break;
         }
       }
+
       return this;
     }
 
