@@ -1,4 +1,7 @@
 public class BstConstructionRedo {
+  //  All methods have these as their time/space complexity
+  // 	Average: Time = O(log(n)) | Space = O(1)
+// 		Worst: Time = O(n) | Space = O(1)
   static class BST {
     public int value;
     public BST left;
