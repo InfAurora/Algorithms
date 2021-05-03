@@ -24,7 +24,7 @@ public class ValidParentheses {
       if (stringOfBrackets.length() == 1) {
         return false;
       }
-      
+
       switch (stringOfBrackets.charAt(i)) {
         case ')':
           if (stackOfBrackets.size() == 0) {
@@ -50,7 +50,7 @@ public class ValidParentheses {
           }
           else return false;
           break;
-      
+
         default:
           stackOfBrackets.push(stringOfBrackets.charAt(i));
           break;

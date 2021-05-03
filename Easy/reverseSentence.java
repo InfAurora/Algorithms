@@ -22,7 +22,7 @@ public class ReverseSentence {
     }
 
     // leaves a trailing space at the end of the sentence
-    // can resolve by using a normal for loop and using an if 
+    // can resolve by using a normal for loop and using an if
     // statement to check if you are at the end of the array
     for (String word : arrayOfWords) {
       reversedString += word + " ";

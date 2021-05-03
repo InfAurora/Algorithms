@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BranchSums {
-  
+
 // Time = O(n) Space = O(n) n is the number of nodes in the Binary Tree
   public static class BinaryTree {
     int value;
@@ -23,7 +23,7 @@ public class BranchSums {
     branchSumHelper(root, sum, arrayOfSums);
 		return arrayOfSums;
   }
-	
+
 	public static void branchSumHelper(BinaryTree tree, int sum, List<Integer> arrayOfSums) {
     // Write your code here.
 		if(tree == null) {

@@ -7,7 +7,7 @@ public class DepthFirstSearch {
   // Where v stands for vertices (nodes), vertices are points in a graph
   //  e stands for edges, the lines that connect each vertice/node
   public static void main(String[] args) {
-    
+
   }
 
   static class Node {

@@ -51,7 +51,7 @@ public class BSTConstruction {
 				return true;
 			}
     }
-		
+
 // 		Average: Time = O(log(n)) | Space = O(log(n))
 // 		Worst: Time = O(n) | Space = O(n)
 		public BST remove(int value) {
@@ -93,7 +93,7 @@ public class BSTConstruction {
 				}
 			}
     }
-		
+
 		public int getMinValue() {
 			if (left == null) {
 				return this.value;

@@ -3,13 +3,13 @@ public class FindClosestValueInBst {
   // Average TIME = O(log(n)) | SPACE O(log(n))
   // Worst TIME =  O(n) | SPACE O(n)
   public static void main(String[] args) {
-    
+
   }
 
   public static int findClosestValueInBst(BST tree, int target) {
     return findClosestValueInBstHelper(tree, target, tree.value);
   }
-	
+
 	public static int findClosestValueInBstHelper(BST tree, int target, int closest) {
 		int currentNodeValue = tree.value;
    	if (Math.abs(target - closest) > Math.abs(target - currentNodeValue)) {
