@@ -18,14 +18,14 @@ public class ValidParentheses {
     System.out.println(isValid(invalidStringThree));
   }
 
-  public static boolean isValid(String stringOfBrackets) {
+  public static boolean isValid(String str) {
     Stack<Character> stackOfBrackets = new Stack<>();
-    for (int i = 0; i < stringOfBrackets.length(); i++) {
-      if (stringOfBrackets.length() == 1) {
+    for (int i = 0; i < str.length(); i++) {
+      if (str.length() == 1) {
         return false;
       }
 
-      switch (stringOfBrackets.charAt(i)) {
+      switch (str.charAt(i)) {
         case ')':
           if (stackOfBrackets.size() == 0) {
             return false;
@@ -52,7 +52,7 @@ public class ValidParentheses {
           break;
 
         default:
-          stackOfBrackets.push(stringOfBrackets.charAt(i));
+          stackOfBrackets.push(str.charAt(i));
           break;
       }
     }
