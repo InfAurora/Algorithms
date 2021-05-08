@@ -18,6 +18,8 @@ public class MoveElementToEnd {
   }
   public static List<Integer> moveElementToEnd(List<Integer> array, int toMove) {
     // Write your code here.
+    // Need to shift keep pointer on same index position as number just removed
+    // Use seperate counter as stopping point
     for (int i = 0; i < array.size(); i++) {
       System.out.println(array.indexOf(i));
       if (array.get(i) == toMove) {
