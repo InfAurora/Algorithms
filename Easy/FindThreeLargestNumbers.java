@@ -10,9 +10,6 @@ public class FindThreeLargestNumbers {
 	// Space = O(1)
   public static int[] findThreeLargestNumbers(int[] array) {
     // Write your code here.
-		int biggest = Integer.MIN_VALUE;
-		int middle = Integer.MIN_VALUE;
-		int last = Integer.MIN_VALUE;
 		int[] biggestNumbers = {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
 		for (int number: array) {
 			if (number > biggestNumbers[2]) {
