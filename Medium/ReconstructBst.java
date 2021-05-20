@@ -13,6 +13,8 @@ public class ReconstructBst {
 
   public BST reconstructBst(ArrayList<Integer> preOrderTraversalValues) {
     // Write your code here.
+    // If smaller go left. moment gets bigger then current node then return
+    // then go right. Do that recursively/ or until while loop is finished
     return null;
   }
 }
