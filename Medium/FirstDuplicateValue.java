@@ -1,8 +1,11 @@
 public class FirstDuplicateValue {
+  // TIME = O(n) | SPACE O(1)
   public int firstDuplicateValue(int[] array) {
-    // Write your code here.
-    // Use map to store past numbers and index position
-    // If number exists and has smallest index, then return it;
+    for(int value: array) {
+      int index = Math.abs(value);
+      if(array[index - 1] < 0) return index;
+      array[index - 1] *= -1;
+    }
     return -1;
   }
 }
