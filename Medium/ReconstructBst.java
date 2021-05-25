@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReconstructBst {
   static class BST {
@@ -10,11 +11,30 @@ public class ReconstructBst {
       this.value = value;
     }
   }
-
-  public BST reconstructBst(ArrayList<Integer> preOrderTraversalValues) {
+// Time = O(n^2) | Space = O(n)
+  public BST reconstructBst(List<Integer> preOrderTraversalValues) {
     // Write your code here.
-    // If smaller go left. moment gets bigger then current node then return
-    // then go right. Do that recursively/ or until while loop is finished
-    return null;
+		if (preOrderTraversalValues.size() == 0) {
+			return null;
+		}
+
+		int currentValue = preOrderTraversalValues.get(0);
+		int rightSubTreeRootIdx = preOrderTraversalValues.size();
+
+		for(int idx = 1; idx < preOrderTraversalValues.size(); idx++) {
+			int value = preOrderTraversalValues.get(idx);
+			if(value >= currentValue) {
+				rightSubTreeRootIdx = idx;
+				break;
+			}
+		}
+
+		BST leftSubTree = reconstructBst(preOrderTraversalValues.subList(1, rightSubTreeRootIdx));
+		BST rightSubTree =
+			reconstructBst(preOrderTraversalValues.subList(rightSubTreeRootIdx, preOrderTraversalValues.size()));
+		BST bst = new BST(currentValue);
+		bst.left = leftSubTree;
+		bst.right = rightSubTree;
+    return bst;
   }
 }
