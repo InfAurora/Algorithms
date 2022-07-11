@@ -19,6 +19,7 @@
 
 ## **Arrays**
  * **Static Arrays**
+    * Arrays need to store spaces in memory back to back
    * A static array, is an array where you have to specify the size of the array, and that array size will never change.
    * **Getting** or **setting** in a static array runs in constant time $O(1)$
    * **Creating**(Initializing) an array will take up $O(n)$ space
@@ -58,6 +59,27 @@
   * **DEQUEUE**(remove) $O(1)$ time & space
   * **SEARCH**(remove) $O(N)$ time & $O(1)$ space
   * **PEAK**(look at end) $O(1)$ time
+
+## **Linked List**
+* Conceptually similar to an array.
+* It differs by how it is implemented/stored in memory
+  * Linked lists will store elements **anywhere** in memory, and will **connect them using pointers**
+  * The element and its pointer need to be stored back to back in memory
+* **Head** - beginning of linked list
+* **Tail** - end of linked list
+* **Circular** - you can make a circular linked list (head points to tail or vice versa)
+* **SINGLY**
+  * **INIT** $O(n)$ time & space
+  * **GET** $O(i)$(i is the index) time, & $O(1)$ space
+  * **SET**(override) $O(i)$(i is the index) time, & $O(1)$ space
+  * **COPY** $O(n)$ time & space
+  * **TRAVERSE** $O(n)$ time & $O(1)$ space
+  * **INSERT** worst $O(n)$ time & $O(n)$ space
+    * If you have reference to head or tail then it is $O(1)$ time & $O(n)$ space
+
+* **DOUBLY**
+  * Every single element has two pointers (next and previous)
+  * Doubly linked lists should almost always have a reference to the tail, so you could go from the tail back to the head if you wanted to
 
 ## **Strings**
 * **Strings** are typically mapped to an integer using an encoding standard (like ASCII).
