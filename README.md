@@ -54,8 +54,17 @@
   * Cost to store a queue is $O(n)$ space
   * Can create a **priority queue** (keeps track of what has the highest priority)
   * FIFO - First in First out. The first thing that is inserted in, is also going to be the first thing that comes out
-  * **ENQUEUE**(insert) $O(1)$ time & space
+  * **ENQUEUE**(insert) * **Stack** time & space
   * **DEQUEUE**(remove) $O(1)$ time & space
   * **SEARCH**(remove) $O(N)$ time & $O(1)$ space
   * **PEAK**(look at end) $O(1)$ time
 
+## **Strings**
+* **Strings** are typically mapped to an integer using an encoding standard (like ASCII).
+  * Under the hood strings are stored as an array of characters
+  * All operations done a single character on string (that are a fixed amount of bytes) will $O(1)$ time
+  * Many languages strings are immutable (java, js, python)
+  * If you are working with an immutable string ``` foobar += " word" ``` is not $O(1)$(constant) time operation it is $O(n + m)$(linear), because a copy of the original string is being created with the new string attatched to it to it
+* **TRAVERSE** $O(N)$ time & $O(1)$ space
+* **COPY** $O(N)$ time & space
+* **GET** $O(1)$ time & space
