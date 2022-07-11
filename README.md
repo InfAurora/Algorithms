@@ -81,6 +81,20 @@
   * Every single element has two pointers (next and previous)
   * Doubly linked lists should almost always have a reference to the tail, so you could go from the tail back to the head if you wanted to
 
+## **Hash Tables**
+* **Hash Table** is a data structure that allows you to store pairs of keys and values
+* Hash tables are built on top of arrays. **Each value** in the array will be a **linked list**
+* Hash tables can use any data type as a key to reference a value
+  * A **hashing function** will be used to transorm an index position to be the data type you want it to be
+  * If you are using a string as the key, each character in the string will be transformed into an integer(ascii value) and then all the numbers will get added up and divided(using modulo or %) by the number of index positions(length of array). The number you get will be the index position. **intValue % lengthOfArray = indexInArray**
+  * A **collision** is when you get multiple values that need to be stored in the same index position. When a collision occurs, the value will be added to the linked list at that index
+  * Each value within the linked list in the array, needs to point back to its key
+  * If a hash table has run out of space, **resizing** can be used to adjust the size of the array. Example. if the array has used a little over have of its indices, it will double its array size and then use a different hashing function to fill itself back up
+* Storing a hash table is $O(n)$ space
+* **INSERTING** a key/value pair: $O(1)$ on average; $O(n)$ in the worse case
+* **REMOVING** a key/value pair: $O(1)$ on average; $O(n)$ in the worse case
+* **SEARCH** a value given a key: $O(1)$ on average; $O(n)$ in the worse case
+
 ## **Strings**
 * **Strings** are typically mapped to an integer using an encoding standard (like ASCII).
   * Under the hood strings are stored as an array of characters
