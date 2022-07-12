@@ -1,30 +1,31 @@
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
   // Time = log O(n) - O(n)
   // Space = log O(n) - O(n)
   public static void main(String[] args) {
-    int[] numbersOne = {1, 2, -1, -3, 3, -4, 5};
-    int[] numbersTwo = {1, 2, 5};
-    int[] numbersThree = {-1, -3, -4, -5};
-    System.out.println(Arrays.toString(findTargetSum(numbersOne, -7)));
-    System.out.println(Arrays.toString(findTargetSum(numbersTwo, 7)));
-    System.out.println(Arrays.toString(findTargetSum(numbersThree, -9)));
+    int[] numbersOne = {3, 5, -4, 8, 11, 1, -1, 6};
+    int[] numbersTwo = {4, 6};
+    int[] numbersThree = {4,6,1};
+    int[] numbersFour = {4, 6, 1, -3};
+    System.out.println(Arrays.toString(twoNumberSum(numbersOne, 10)));
+    System.out.println(Arrays.toString(twoNumberSum(numbersTwo, 10)));
+    System.out.println(Arrays.toString(twoNumberSum(numbersThree, 5)));
+    System.out.println(Arrays.toString(twoNumberSum(numbersFour, 3)));
   }
 
-  public static int[] findTargetSum(int[] arrayOfIntegers, int target) {
-    int[] indicies = new int[2];
-    HashMap<Integer, Integer> numberNeeded = new HashMap<>();
-    for (int i = 0; i <= arrayOfIntegers.length; i++) {
-      if (numberNeeded.containsKey(target - arrayOfIntegers[i])) {
-        indicies[0] = numberNeeded.get(target - arrayOfIntegers[i]);
-        indicies[1] = i;
-        return indicies;
+  public static int[] twoNumberSum(int[] array, int targetSum) {
+    Map<Integer, Integer> nums = new HashMap<>();
+    for(int i = 0; i < array.length; i++) {
+      int compliment = targetSum - array[i];
+      if(nums.containsKey(compliment)) {
+        return new int[] {compliment, array[i]};
+      } else {
+        nums.put(array[i], compliment);
       }
-      numberNeeded.put(arrayOfIntegers[i], i);
-      numberNeeded.put(target - arrayOfIntegers[i], i);
     }
-    return indicies;
+    return new int[0];
   }
 }
