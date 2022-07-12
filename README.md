@@ -112,6 +112,30 @@
   * **Depth First Search** is a deep search into the graph
   * **Bredth First Search** is a wide search into the graph
 
+## **Trees**
+* **Trees** are a type of graph.
+  * A tree is a graph that is rooted, meaning it has a root(start point/ top) node
+  * Each node will only have one parent
+  * Each node can have a child node
+  * It will be acyclic
+  * It cannot be disconnected
+  * **Branch** - a node that starts at the root and ends at a bottom node
+  * **Leaf** - is a node at the bottom of a tree
+  * **Level** - is a layer deeper in the tree
+  * **Complete tree** - is a tree that is completely filled up on the last level from left to right
+  * **Full tree** - is a tree where every node either has k nodes, or no nodes
+  * **Perfect tree** - is a tree where every node is completely filled up
+  * **TYPES OF TREES**
+    * Storing a tree will take up $O(n)$ space
+    * Searching entire tree is $O(n)$ time
+    * **BINARY** - Every node will have at **most two child nodes**
+      * **K-ARY** - Every node will have at **least k child nodes**
+    * **TRAVERSING**
+      * **avg** time for a **balanced binary tree** is $O(log(n))$ time
+      * **worst** is $O(n)$ time
+
+  * **Balanced tree** - if it roughly maintains a $O(log(n))$ time complexity
+
 
 ## **Strings**
 * **Strings** are typically mapped to an integer using an encoding standard (like ASCII).
