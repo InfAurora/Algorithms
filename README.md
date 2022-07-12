@@ -95,6 +95,24 @@
 * **REMOVING** a key/value pair: $O(1)$ on average; $O(n)$ in the worse case
 * **SEARCH** a value given a key: $O(1)$ on average; $O(n)$ in the worse case
 
+## **Graphs**
+* **Graphs** are a collection of nodes that may or may not be connected to eachother
+* Each node is called a **vertice** and the connections are called **edges**
+* Storing a graph will take up $O(V + E)$ space
+* Graphs can be **connected** or **not connected**, **directed** or **undirected**, **cyclic** or **acyclic**
+  * A **Connected** graph, is where you can reach any other node in the graph, from a node
+  * A **directed** graph, is a graph where a node can connect to another node via **one direction**, or the **edge** has a **specified direction**
+  * An **undirected** is a graph where the edges **do not** have a **specified direction**. The nodes connected by the edge can reach eachother directly.
+  * A **Graph Cycle** is where you have at least three nodes that connect in an infinite circle.
+    * **Cyclic** - a graph that has at least one cycle
+    * **Acyclic** - a graph that has no cycles
+    * **NOTE - ** you want to keep track of nodes you have visited, so you do not find yourself stuck in a loop
+  * **Adjacency list**, list of all nodes a node is connected to
+* **TRAVERSAL**(Search) is $O(V + E)$ time
+  * **Depth First Search** is a deep search into the graph
+  * **Bredth First Search** is a wide search into the graph
+
+
 ## **Strings**
 * **Strings** are typically mapped to an integer using an encoding standard (like ASCII).
   * Under the hood strings are stored as an array of characters
